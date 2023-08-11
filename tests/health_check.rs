@@ -1,12 +1,9 @@
 //! tests/health_check.rs
 
-use sqlx::{Connection, PgConnection, PgPool, Executor};
-use uuid::Uuid;
+use sqlx::{Connection, Executor, PgConnection, PgPool};
 use std::net::TcpListener;
-use zero2prod::configuration::{
-    DatabaseSettings,
-    get_configuration,
-};
+use uuid::Uuid;
+use zero2prod::configuration::{get_configuration, DatabaseSettings};
 use zero2prod::startup::run;
 
 pub struct TestApp {
